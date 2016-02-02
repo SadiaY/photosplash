@@ -1,0 +1,40 @@
+﻿
+@*@using login_signup.Models;*@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+    <title>AddCat</title>
+</head>
+<body>
+    <div>
+        <div class="col-sm-2" style="height:500px">
+            <div class="container" style="width:400px; height:1000px;">
+                <div class="panel panel-default" style="width:170px; height:1000px; background-color:white">
+
+                    @{foreach (var c in Model)
+                        <div class="panel-body"><a href="/Home/automobiles">@c.Name</a></div>
+
+                    }
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

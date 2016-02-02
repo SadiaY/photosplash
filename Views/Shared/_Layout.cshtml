@@ -1,0 +1,107 @@
+﻿
+@*@model login_signup.Models.User*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="row" style="background-color:white">
+        <a href="#" rel="" title="Image 1"><img src="~/Images/london - Copy.jpg" class="img-rounded" width="1250" height="200" alt="Title Text" /></a>
+        
+
+
+        @*<nav class="navbar navbar-inverse " style="align-items:center">*@
+
+
+            <nav class="navbar navbar-inverse " style="align-items:center">
+                <div class="container" style="background-color: black">
+
+                    @*e96519*@
+                    @*c42703*@
+
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/Home/newView"><font style="color:white">Home</font></a></li>
+                        <li><a href="/Home/VAbout"><font style="color:white">About</font></a></li>
+                        <li><a href="/Home/VContact">Contact Us</a></li>
+                        <li><a href="/Home/LatestWallpapers">LatestWallpapers</a></li>
+                        <li><a href="/Home/gallery">Gallery</a></li>
+                        <li><a href="/Home/UploadImage">Submit Wallpapers</a></li>
+
+                        @*<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">Account <span class="caret"></span></a
+
+                            </ul>
+                        </li>*@
+
+                        
+
+                    </ul>
+
+                    @*<ul class="nav navbar-nav navbar-right">
+                       
+                        <li><a href="/Home/Signout">Logout</a></li>
+                        
+                        
+                    </ul>*@
+                   
+                    <ul class="nav navbar-nav navbar-right">
+                        @*<li><a href="#"@Model.Fname</li>*@
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">Account <span class="caret"></span></a>
+                            @*<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></a>*@
+                            <ul class="dropdown-menu">
+
+                                <li><a href="/Home/display">View Profile</a></li>
+                                <li><a href="/Home/Update">Update Profile</a></li>
+                                <li><a href="/Home/UploadImage">Upload Image</a></li>
+                                <li><a href="/Home/viewAlbum">View Album</a></li>
+                                @*<li><a href="/Home/PostComment">Post Comment</a></li>*@
+                                <li><a href="/Home/Signout">Logout</a></li>
+
+
+                            </ul>
+                        </li>
+                        @*<li><a href="/Home/Signout">Logout</a></li>*@
+
+
+                    </ul>
+
+
+                    <form class="navbar-form navbar-right" role="search" action="/Home/USearchDB">
+                        <div class="form-group">
+                            <input id="search" type="text" name="s1" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+
+
+                    @*<form action="#" method="post" id="search" class="navbar-search pull-right">
+                        <input type="text" class="search-query" style="background-color :grey" placeholder="Search">
+                        <input type="image" id="go" src="~/Images/search.gif" alt="Search" />
+                     
+                    </form>*@
+                </div>
+
+            </nav>
+        @*</nav>*@
+        <!-- ####################################################################################################### -->
+        @RenderBody()
+
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

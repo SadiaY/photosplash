@@ -1,0 +1,384 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPEHTML>
+<html>
+<head>
+    <title>PHOTOGALARY</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<body id="top">
+
+    <nav class="navbar navbar-inverse " style="align-items:center">
+        <div class="container-fluid">
+            <div class="nav navbar-header">
+                <a href="#" class="navbar-brand"><h1 style="color: #4a4a4a; font-family: 'SketchFlow Print'">PhotoGallery</h1></a><br /><br />
+
+            </div>
+
+            <h1 style="color:darkred; font-family: 'SketchFlow Print'">PHOTOSPLASH</h1>
+        </div>
+        <nav class="navbar navbar-inverse " style="align-items:center">
+            <div class="container-fluid" style="background-color:black">
+
+
+
+                @*<form class="navbar-search pull-right">
+                        <input type="text" class="search-query" style="background-color :grey" placeholder="Search">
+                        <button type="submit" class="btn">Search</button>
+                    </form>*@
+
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/Home/main">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/LatestWallpers">LatestWallpapers</a></li>
+                    <li><a href="/Home/gallery">Gallery</a></li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Logout</a></li>
+                </ul>
+               
+                    <form action="#" method="post" id="search" class="navbar-search pull-right">
+                        <input type="text" class="search-query" style="background-color :grey ; height:30px" placeholder="Search">
+                        @*<input type="image" id="go" src="~/Images/search.gif" alt="Search" />*@
+                        
+                            <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        
+                </form>
+            </div>
+
+        </nav>
+    </nav>
+    <!-- ####################################################################################################### -->
+
+
+
+    <!-- ####################################################################################################### -->
+
+    <div class="container-fluid">
+
+
+        @*<div style="background-color:black" class="jumbotron">
+            <h2 align="center " style="font-family:'SketchFlow Print'">welcome to the Ocean of wallpapers</h2>
+            <p>Resize this responsive page to see the effect!</p>
+        </div>*@
+
+
+        <div class="row" style="background-color:black">
+
+
+            <div class="col-sm-2" style="background-color:black">
+
+                <div class="container" style="width:400px; height:400px;">
+                    
+                    <div class="panel panel-default" style="width:170px; height:400px; background-color:gray">
+                        <div class="panel-heading">Settings</div>
+                        <div class="panel-body"><a href="/Home/display">View profile</a></div>
+                        <div class="panel-body"><a href="/Home/update">Update profile</a></div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+
+
+            @*<div class="col-sm-4">
+                    <h3>Catagories</h3>
+                    <div class="row">
+                        <div class="col-sm-4" style="background-color:lightgray;padding: 30px;">
+                            @for (int i = 0; i < 10; i++)
+                            {<div class="row"><div align="center" class="col-md-2"><a href="#">Hello</a></div></div>}
+                        </div>
+                    </div>
+                </div>*@
+
+            @*<div class="col-sm-4">
+                    <h3>Column 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                </div>*@
+
+
+            @*<div id="tabs-1" class="thumbnail">
+                    <ul>
+                        <li><a href="#" rel="" title="Image 1"><img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="230" height="230" alt="Title Text" /></a></li>
+                        <li><a href="#" rel="" title="Image 1"><img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="230" height="230" alt="Title Text" /></a></li>
+                        <li><a href="#" rel="" title="Image 1"><img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="230" height="230" alt="Title Text" /></a></li>
+                        <li><a href="#" rel="" title="Image 1"><img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="230" height="230" alt="Title Text" /></a></li>
+                        <li><a href="#" rel="" title="Image 1"><img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="230" height="230" alt="Title Text" /></a></li>
+
+                    </ul>
+                </div>*@
+
+            <div style="background-color: black" class="col-sm-10">
+                <div class="container" style="width:600px; height:500px">
+                    <div style="background-color:black">
+                        <meta charset="utf-8" />
+
+                        <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+
+                        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+                        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                        <style>
+                            .carousel-inner > .item > img,
+                            .carousel-inner > .item > a > img {
+                                width: 20%;
+                                height: 55%;
+                                margin: auto;
+                            }
+                        </style>
+                        <br>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                <li data-target="#myCarousel" data-slide-to="4"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    @*<img src="~/Content/images/logo copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                    <div class="carousel-caption">
+                                        <h3>Suiti Boutique</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="item ">
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" class="img-rounded" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    @*<img src="~/Content/images/poster copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+
+                                    <div class="carousel-caption">
+                                        <h3>Photosplash</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="item ">
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                    <div class="carousel-caption">
+                                        <h3>nature Beauty</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    @*<img src="~/Content/images/outer copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                    <div class="carousel-caption">
+                                        <h3>Automobile Love</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    @*<img src="~/Content/images/inner copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                    <div class="carousel-caption">
+                                        <h3>Fashion Craze</h3>
+                                        <p>For women</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+
+
+
+
+
+
+
+                <!-- ####################################################################################################### -->
+                @*<div style="background-color:black" class="col-sm-10">
+                <div style="background-color:black" align="center" class="thumbnails">
+                    <ul>
+                        <li class="span10">
+                            <div style="background-color:black" align="center" class="thumbnail">
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" class="img-rounded" width="1000" height="1000" alt="Title Text" /></a>
+                                <h3>feel the beauty of nature</h3>
+                                <p>Thumbnail caption...</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>*@
+
+
+
+
+
+
+            </div>
+
+    </div>
+    <!-- ####################################################################################################### -->
+
+    <div class="container-fluid" style="background-color:gray">
+        @*<div style="background-color:black" class="jumbotron">*@
+
+            @*<p>Resize this responsive page to see the effect!</p>*@
+        @*  </div>*@
+        <div class="row">
+
+            <div class="col-sm-2">
+                <h3 style="color:darkred"></h3>
+                <p></p>
+                <p> </p>
+            </div>
+
+            <div class="col-sm-3">
+                <h3 style="color:darkred">About Us </h3>
+                <p>Aaaa bbbbb ccc dddddd eeeee ffffff gggggg hhhhh...</p>
+                <p>Ut ssss sss dddd eeeee, qqqqq cfr exiteddd uuuyy uuuuuuu...</p>
+                
+            </div>
+
+
+            <div class="col-sm-3">
+                <h3 style="color:darkred">Contact Us</h3>
+                <p>Aaaa bbbbb ccc dddddd eeeee ffffff gggggg hhhhh...</p>
+                <p>Ut ssss sss dddd eeeee, qqqqq cfr exiteddd uuuyy uuuuuuu...</p>
+            </div>
+
+            <div class="col-sm-3">
+                <h3 style="color:darkred">Column 4</h3>
+                <p>Aaaa bbbbb ccc dddddd eeeee ffffff gggggg hhhhh...</p>
+                <p>Ut ssss sss dddd eeeee, qqqqq cfr exiteddd uuuyy uuuuuuu...</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- ####################################################################################################### -->
+
+    @*<div class="panel panel-default;span2" align="left">
+
+                <div align="right" class="thumbnails" >
+                    <ul>
+                    <li class="span2">
+                        <div align="center" class="thumbnail">
+                            <img src="Images/fb_img_1436190628810.jpg" class="img-rounded" width="230" height="230">
+                            <h3>latest Wallpapers</h3>
+                            <p>Thumbnail caption...</p>
+                        </div>
+                    </li>
+                        </ul>
+
+                </div>
+
+                <div class="panel-heading" ><h4 style="color:darkgray">Catagories</h4></div>
+        @for (int i = 0; i < 10; i++)
+        {
+                <div class="panel-body"><a href="#">Baisc Panel</a></div>
+                }
+        </div>*@
+
+
+
+
+    @*<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2" style="background-color:gray;padding: 30px;"> Catagories @for(int i=0;i<10;i++){<div class="row"><div align="center" class="col-md-2">hello</div></div>}
+                </div>
+
+                <ul class="thumbnails">
+                    <li class="span2">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/160x200" alt="">
+                            <h3>latest Wallpapers</h3>
+                            <p>Thumbnail caption...</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+        </div>*@
+
+
+
+
+
+
+
+
+    @*<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li><a href="#">nature</a></li>
+                <li><a href="#">automobiles</a></li>
+                <li><a href="#">landscape</a></li>
+            </ul>*@
+    @*</div>
+            <div id="page-content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="#" class="btn btn-success" id="menu-toggle">Toggle Menu</a>
+                            <h1>Sidebar layouts are Cool</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+
+
+
+
+
+</html>
+
+
+

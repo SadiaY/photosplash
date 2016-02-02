@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>AddCategory</title>
+</head>
+<body>
+
+    <div class="col-sm-3" style="width:300px">
+        <form action="/Admin/AddCat" method="post" >
+            <p>Category: <input type="text" class="form-control" name="category" /></p>
+
+            <input type="submit" value="Add" />
+        </form>
+    </div>
+
+   
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>
+

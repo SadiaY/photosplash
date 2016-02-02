@@ -1,0 +1,199 @@
+﻿@using login_signup.Models
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>imgView</title>
+    <script>
+        $(document).ready(function () {
+
+            $('#comment-button').click(function() {
+                var id = $('#imageID').val();
+                var comment = $('#new-comment').val();
+
+               //  $('#comments-box').load('/Home/PostComment?comment=' + encodeURIComponent($('#new-comment').val()) + '&imgID=' + $('#imageID').val());
+                $.getJSON('/Home/PostComment?comment=' + comment + '&imgID=' + id, function (data) {
+                    $('#comment-box').empty();
+                    $.each(data, function (i, value) {
+                        
+                        $('#comment-box').append('<div ><label style="font-family:Algerian;font-style:oblique;font-size:small;color:orange">User Name  :' + value.UserID + '</div>' + '<div ><label style="font-family:sans-serif;font-style:oblique;font-size:small;">Comment  :' + value.Comment1 + '</div>');
+                    });
+
+
+                 });
+
+               // $('#comments-box').load('/Home/PostComment?comment=' + encodeURIComponent($('#new-comment').val()) + '&imgID=' + $('#imageID').val());
+               // $('#new-comment').val('#new-commen');
+            });
+        });
+
+    </script>
+</head>
+<body id="top">
+
+
+    <div class="col-sm-2" style="height:500px">
+        <div class="container" style="width:400px; height:1000px;">
+
+
+        </div>
+
+    </div>
+    <div class="col-sm-8" align="center" style="background-color: ghostwhite; width: 700px">
+
+        <h1 align="center" style="font-family: 'Buxton Sketch'; color: #e96519"></h1><br />
+        @*<h3 align="center" style="font-family:'Buxton Sketch'">View  Photos any time, anywhere.. Its always there, Always free !</h3><br />*@
+
+
+        @foreach (Image m in Model)
+                {
+
+                <div align="center" class="col-sm-8">
+                    <a href="" rel="" title="Image 1" class="thumbnail" style="background-color: #009688">
+
+                        <img align="middle" src="~/UploadImages/@m.Name" class="img-rounded" width="600" height="600" alt="Title Text" />
+                        <h3 align="center" style="font-family :'SketchFlow Print'"><font color="#e96519"></font></h3>
+                    </a>
+                   
+                    <div id="comment-box">
+                        @foreach (Comment c in ViewBag.Comments)
+                        {
+                            <div class="right">
+                                <label style="font-family:Algerian;font-style:oblique;font-size:small;color:orange"> UserName:   @c.User.Fname </label>
+                                <label style="font-family:sans-serif;font-style:oblique;font-size:small;">    Comment:   @c.Comment1 </label>
+</div> 
+                        }
+                    </div>
+                    <input type="hidden" id="imageID" value="@m.Id" />
+                    <input id="new-comment" type="text" placeholder="Enter your comment here" />
+                    <input id="comment-button" type="button" value="Comment" />
+                </div>
+                }
+
+
+
+    </div>
+
+
+
+
+    <!-- ####################################################################################################### -->
+    @*<div class="container">
+
+                <div class="jumbotron" style="background-color:white">
+
+
+            <div class="row" style="background-color: white">
+
+
+                <div style="background-color:white" class="col-sm-8">
+                    <div style="background-color: white" align="right" class="thumbnails">
+                        <ul>
+                            <li class="span2">
+                                <div style="background-color: white" align="center" class="thumbnail">
+                                    <a href="/Home/landscape" rel="" title="Image 1"><img src="~/Images/car1.jpg" class="img-rounded" width="600" height="600" alt="Title Text" /></a>
+                                    <h3> <a href="/Home/landscape"></a>landscape</h3>
+                                    <p>Thumbnail caption...</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+            </div>
+
+            <div style="background-color: white" class="col-sm-4">
+                <div class="row" style=" background-color: white; height: 520px">
+
+                    <div class="col-md-4" style="background-color: white">
+                        <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+
+                            <img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="120" height="120" alt="Title Text" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="background-color: white">
+                        <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+
+                            <img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="120" height="120" alt="Title Text" />
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="background-color: white">
+                        <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+
+                            <img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="120" height="120" alt="Title Text" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="background-color: white">
+                        <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+
+                            <img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="120" height="120" alt="Title Text" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="background-color: white">
+                        <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+
+                            <img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="120" height="120" alt="Title Text" />
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="background-color: white">
+                        <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+
+                            <img src="~/Images/fb_img_1436190628810.jpg" class="img-rounded" width="120" height="120" alt="Title Text" />
+                        </a>
+                    </div>
+
+                </div>
+                    </div>
+
+
+
+
+        </div>
+            </div>*@
+
+
+    <!-- ####################################################################################################### -->
+    @*<div class="container-fluid" style="background-color:black">
+
+            <div class="row">
+
+                <div class="col-sm-2">
+                    <h3 style="color:darkred"></h3>
+                    <p></p>
+                    <p> </p>
+                </div>
+
+                <div class="col-sm-3">
+                    <h3 style="color:darkred">About Us </h3>
+                    <p>Aaaa bbbbb ccc dddddd eeeee ffffff gggggg hhhhh...</p>
+                    <p>Ut ssss sss dddd eeeee, qqqqq cfr exiteddd uuuyy uuuuuuu...</p>
+
+                </div>
+
+
+                <div class="col-sm-3">
+                    <h3 style="color:darkred">Contact Us</h3>
+                    <p>Aaaa bbbbb ccc dddddd eeeee ffffff gggggg hhhhh...</p>
+                    <p>Ut ssss sss dddd eeeee, qqqqq cfr exiteddd uuuyy uuuuuuu...</p>
+                </div>
+
+                <div class="col-sm-3">
+                    <h3 style="color:darkred">Column 4</h3>
+                    <p>Aaaa bbbbb ccc dddddd eeeee ffffff gggggg hhhhh...</p>
+                    <p>Ut ssss sss dddd eeeee, qqqqq cfr exiteddd uuuyy uuuuuuu...</p>
+                </div>
+            </div>
+        </div>*@
+    <!-- ####################################################################################################### -->
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

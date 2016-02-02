@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model login_signup.Models.User
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>ViewUsers</title>
+</head>
+<body>
+
+    <div class="container">
+        <form class="form-horizontal" role="form" style="background-image:initial" method="post" action="/Home/updateConfirm/@Model.Id">
+            <h1 align="center" style="font-family:'Buxton Sketch'">Edit Your Record Here</h1>
+            <br><br>
+            <div align="center" class="form-group">
+                
+                <label class="control-label col-sm-2" for="Fname">FirstName:</label>
+                <div class=" col-xs-5" align="left">
+                    <input type="text" class="form-control" name="Fname" value="@Model.Fname">
+                </div>
+            </div>
+
+            <div align="center" class="form-group" >
+                <label class="control-label col-sm-2" for="Lname">LastName:</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="Lname" value="@Model.Lname"><br>
+                </div>
+            </div>
+            <div align="center" class="form-group">
+                <label class="control-label col-sm-2" for="Age">Age:</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="Age" value="@Model.Age">
+                </div>
+            </div>
+            <div align="center" class="form-group">
+                <label class="control-label col-sm-2" for="Phone">Phone:</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="Phone" value="@Model.Phone"><br>
+                </div>
+            </div>
+
+            <div align="center" class="form-group">
+                <label class="control-label col-sm-2" for="Password">Password:</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="Password" value="@Model.Password">
+                </div>
+            </div>
+
+            <div align="center" class="form-group">
+                <label class="control-label col-sm-2" for="Cpassword">Confirm Password:</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="Cpassword" value="@Model.Cpassword">
+                </div>
+                @*<div class="radio">
+                &nbsp; &nbsp; &nbsp;
+                <label><input type="radio" name="male">Male</label>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <label><input type="radio" name="female">Famale</label>
+            </div>*@
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-xs-5">
+
+                    <input type="submit" value="Update Account" class="btn btn-success active" />
+                </div>
+
+            </div>
+
+            <blockquote>
+
+                <footer>All copyrights reserved</footer>
+            </blockquote>
+
+        </form>
+    </div>
+    @*<div align="center" class="container">
+        <h2 align="center" style="font-family:'Buxton Sketch'">Edit Your Record Here</h2>
+        
+
+                
+                    <form action="/Home/updateConfirm" method="post">
+                        Firstname<input type="text" name="Fname" value="@Model.Fname" /> <br /><br />
+                        Lastname<input type="text" name="Lname" value="@Model.Lname" /> <br /><br />
+                        Age<input type="text" name="Age" value="@Model.Age" /> <br /><br />
+                        Phone<input type="text" name="Phone" value="@Model.Phone" /> <br /><br />
+
+                        <input type="submit" value="Update" />
+                    </form>
+                    
+                
+
+
+           
+    </div>*@
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+﻿
+@using  login_signup.Models;
+@*@model login_signup.Models*@
+
+@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHOTOGALARY</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="layout/scripts/jquery-photostack.js"></script>
+
+
+</head>
+<body id="top">
+
+
+    <div class="row" style="background-color: white">
+
+
+
+        <!-- ####################################################################################################### -->
+        @*<div class="col-sm-2" style="background-color:black">*@
+
+        <div class="col-sm-3" style="width:200px; height:400px;">
+
+            <div class="col-sm-3" style="background-color: white">
+
+                <div class="container" style="width:400px; height:400px;">
+
+                    <div class="panel panel-default" style="width:170px; height:400px; background-color:white">
+                        <div class="panel-heading" style="font-family:'Buxton Sketch'"><h2><font color=" #e96519">Welcome</font></h2></div>
+
+                        @foreach (Category c in Model)
+                {
+                        <div align="center" class="panel-body"><a href="/Home/displayImg/?id=@c.Id"><font style="color:black">@c.Name</font></a></div>
+
+                }
+                        @*<div class="panel-body"><a href="/Home/display">View Profile</a></div>
+                        <div class="panel-body"><a href="/Home/Update">Update Profile</a></div>
+                        <div class="panel-body"><a href="/Home/UploadImage">Upload Image</a></div>
+                        <div class="panel-body"><a href="/Home/viewAlbum">View Album</a></div>*@
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div style="background-color: ghostwhite" class="col-sm-10">
+            <div class="container" style="width:800px; height:600px">
+                <div style="background-color: white">
+                    <meta charset="utf-8" />
+
+                    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+
+                    @*<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+                    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>*@
+                    <style>
+                        .carousel-inner > .item > img,
+                        .carousel-inner > .item > a > img {
+                            width: 20%;
+                            height: 55%;
+                            margin: auto;
+                        }
+                    </style>
+                    <br>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                            <li data-target="#myCarousel" data-slide-to="5"></li>
+                            <li data-target="#myCarousel" data-slide-to="6"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/tumblr_mdjwi6zdxl1ruy5opo8_1280.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                @*<img src="~/Content/images/logo copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">Photosplash</font></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="item ">
+
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/images (1).jpg" class="img-rounded" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                @*<img src="~/Content/images/poster copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">Nature View</font></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+
+                            <div class="item ">
+
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/car5.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">AutoMobiles Love</font></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/3.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                @*<img src="~/Content/images/outer copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">Artistic</font></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+
+                            <div class="item">
+
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/5.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                @*<img src="~/Content/images/outer copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">WildLife Beauty</font></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+
+                            <div class="item">
+
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/6.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                @*<img src="~/Content/images/outer copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">Food Love</font></h3>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <a href="#" rel="" title="Image 1"><img src="~/Images/4.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                              @*<img src="~/Content/images/inner copy.jpg" alt="boutique" style="width:600px;height:400px;" />*@
+                                <div class="carousel-caption">
+                                    <h3 style="font-family :'SketchFlow Print'"><font color="Black">fashion Craze</font></h3>
+                                    <p>For women</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+            <!-- ####################################################################################################### -->
+
+
+            @*<div class="col-sm-6">*@
+            @*<div style="background-color: white" class="col-sm-10">
+                <div class="container" style="width:800px; height:400px;">
+                    
+                    <div style="background-color:white">
+                        <meta charset="utf-8" />
+
+                        <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+
+                        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+                        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                        <style>
+                            .carousel-inner > .item > img,
+                            .carousel-inner > .item > a > img {
+                                width: 20%;
+                                height: 55%;
+                                margin: auto;
+                            }
+                        </style>
+                        <br>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                <li data-target="#myCarousel" data-slide-to="4"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    <div class="carousel-caption">
+                                        <h3>Photosplash</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="item ">
+
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/fantasy-waterfallx2.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                    <div class="carousel-caption">
+                                        <h3>Nature View</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="item ">
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/car1.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+
+                                    <div class="carousel-caption">
+                                        <h3>AutoMobiles Love</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/photography-15a.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    <div class="carousel-caption">
+                                        <h3>Wild Life Beauty</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+
+
+                                    <a href="#" rel="" title="Image 1"><img src="~/Images/car1.jpg" style="width:600px;height:400px;" alt="Photosplash " /></a>
+                                    <div class="carousel-caption">
+                                        <h3>Fashion Craze</h3>
+                                        <p>For women</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>*@
+
+    <!-- ####################################################################################################### -->
+
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+
+
+
+
+
+</html>
+
+
+

@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>PHOTOGALARY</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+ <body>
+            <div class="row" style="background-color:white">
+                @*<a href="#" rel="" title="Image 1"><img src="~/Images/london - Copy.jpg" class="img-rounded" width="1250" height="200" alt="Title Text" /></a>
+
+           
+     
+            @*<nav class="navbar navbar-inverse " style="align-items:center">
+                
+
+                <nav class="navbar navbar-inverse " style="align-items:center">
+                    <div class="container-fluid" style="background-color:black">
+
+
+
+
+
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/Admin/Index">Home</a></li>
+                            <li class="active"><a href="/Home/newView">UserView</a></li>
+                            <li><a href="/Home/VAbout">About</a></li>
+                            <li><a href="/Home/LatestWallpers">LatestWallpapers</a></li>
+                            <li><a href="/Home/gallery">Gallery</a></li>
+
+
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+
+                        <form action="#" method="post" id="search" class="navbar-search pull-right">
+                            <input type="text" class="search-query" style="background-color :grey" placeholder="Search">
+                            <input type="image" id="go" src="~/Images/search.gif" alt="Search" />
+                            @*<button type="submit" class="btn">Search</button>
+                        </form>
+                    </div>
+
+                </nav>
+            </nav>*@
+            <!-- ####################################################################################################### -->
+
+
+                @*<div class="col-sm-2" style="background-color:black">*@
+
+                    <div class="container" style="width:400px; height:400px;">
+
+                        <div class="panel panel-default" style="width:400px; height:400px; background-color:white">
+                            <div class="panel-heading" ><h2 align=center>Welcome to Admin Panel</h2></div>
+                            <div class="panel-body"><a href="/Admin/ViewUsers"><font style="color:black">View Users</font></a></div>
+                            <div class="panel-body"><a href="/Admin/Add"><font style="color:black">Add User</font></a></div>
+                            <div class="panel-body"><a href="/Admin/Update"><font style="color:black">Update User</font></a></div>
+                            <div class="panel-body"><a  href="/Home/Update"><font style="color:black">Delete User</font></a></div>
+                            <div class="panel-body"><a href="/Admin/UploadImg"><font style="color:black">UploadImage</font></a></div>
+                            <div class="panel-body"><a href="/Admin/AddCategories"><font style="color:black">AddCategories</font></a></div>
+                        </div>
+                    </div>
+            
+       
+
+
+     </div>
+        
+
+            <script src="~/Scripts/bootstrap.js"></script>
+ </body>
+ </html>

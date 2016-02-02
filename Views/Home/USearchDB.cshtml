@@ -1,0 +1,51 @@
+﻿@using login_signup.Models
+@model List<Image>
+
+@{
+    Layout = Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<a href="~/Views/Home/viewAlbum.cshtml">~/Views/Home/viewAlbum.cshtml</a>*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>SearchResults</title>
+</head>
+<body>
+    <div class="col-sm-2" style="height:500px">
+        <div class="container" style="width:400px; height:1000px;">
+
+
+        </div>
+
+    </div>
+    <div class="col-sm-9" align="center" style="background-color:ghostwhite; width:800px">
+
+        <h1 align="center" style="font-family: 'Buxton Sketch'; color: #e96519">Search..</h1><br />
+        <h3 align="center" style="font-family:'Buxton Sketch'">View  Photos any time, anywhere.. Its always there, Always free !</h3><br />
+
+
+
+
+        @foreach (var item in Model)
+        {
+            <div align="right" class="col-sm-3">
+                <a href="/Home/imgView" rel="" title="Image 1" class="thumbnail" style="background-color: white">
+                    @*<img src="@item.Path" class="img-rounded" width="300" height="300" alt="Title Text" />*@
+                    <img src="~/UploadImages/@item.Name" class="img-rounded" width="300" height="300" alt="Title Text" />
+                    <h3 align="center" style="font-family :'SketchFlow Print'"><font color="#e96519">@item.Catogory</font></h3>
+                </a>
+            </div>
+        }
+
+
+
+    </div>
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

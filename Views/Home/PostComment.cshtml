@@ -1,0 +1,53 @@
+﻿@using login_signup.Models
+@model IEnumerable<Comment>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<a href="~/Views/Home/viewAlbum.cshtml">~/Views/Home/viewAlbum.cshtml</a>*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+
+    <title>PostComment</title>
+
+    <script>
+        $(document).ready(function () {
+            $('#comment-button').on('click', function () {
+
+                $.getJSON('/Home/_PostComment?comment=' + encodeURIComponent($('#new-comment').val(),function (data){
+                    $.each(data, function (i, value) {
+
+                        $('#comments-box').append("<p>User id =" + value.UserID + " <br> Comment : " + value.Comment1+"</p>")
+                    });
+
+                }));
+             ////   $('#comments-box').load('/Home/_PostComment?comment=' + encodeURIComponent($('#new-comment').val()));
+               // $('#new-comment').val('');
+            });
+        });
+
+    </script>
+</head>
+<body>
+        <div id="comments-box">
+            @foreach (Comment c in Model)
+            {
+                @c.UserID<br />
+                @c.Comment1<br />
+            }
+
+
+        </div>
+
+    <input id="new-comment" type="text" placeholder="Enter your comment here" />
+    <input id="comment-button" type="button" value="Comment" />
+    <script src="~/Scripts/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="row" style="background-color: white">
+
+
+        <div class="row" style="background-color: white; height: 1000px">
+
+            <div class="col-sm-4" style="background-color:white">
+
+                <div class="container" style="width:400px; height:1000px;">
+
+                    <div class="panel panel-default" style="width:170px; height:1000px; background-color:white">
+                        <div class="panel-heading" style="font-family:'Buxton Sketch'"><h2><font color=" #e96519">Catogories</font></h2></div>
+                        <div class="panel-body">Landscape</div>
+                        <div class="panel-body">Fashion</div>
+                        <div class="panel-body">Automobiles</div>
+                        <div class="panel-body">WildLife</div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- ####################################################################################################### -->
+            @RenderBody()
+
+
+
+
+            @Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+</body>
+</html>

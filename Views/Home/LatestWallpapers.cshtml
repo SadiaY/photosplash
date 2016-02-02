@@ -1,0 +1,147 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>LatestWallpapers</title>
+</head>
+<body>
+    
+    @*<nav class="navbar navbar-inverse " style="align-items:center">
+        <div class="container-fluid">
+            <div class="nav navbar-header">
+                <a href="#" class="navbar-brand"><h1 style="color: #4a4a4a; font-family: 'SketchFlow Print'">PhotoGallery</h1></a><br /><br />
+
+            </div>
+
+            <h1 style="color:darkred; font-family: 'SketchFlow Print'">PHOTOSPLASH</h1>
+        </div>
+        <nav class="navbar navbar-inverse " style="align-items:center">
+            <div class="container-fluid" style="background-color:black">
+
+
+
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/Home/main">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/LatestWallpers">LatestWallpapers</a></li>
+                    <li><a href="/Home/gallery">Gallery</a></li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Logout</a></li>
+                </ul>
+
+                <form action="#" method="post" id="search" class="navbar-search pull-right">
+                    <input type="text" class="search-query" style="background-color :grey" placeholder="Search">
+                    <input type="image" id="go" src="~/Images/search.gif" alt="Search" />
+                   
+                </form>
+            </div>
+
+        </nav>
+    </nav>*@
+    <!-- ####################################################################################################### -->
+
+
+    <div class="col-sm-2" style="height:500px">
+        <div class="container" style="width:400px; height:1000px;">
+            <div class="panel panel-default" style="width:170px; height:1000px; background-color:white">
+                <div class="panel-heading" style="font-family:'Buxton Sketch'"><h2><font color=" #e96519"></font></h2></div>
+
+               
+
+                @*</div>
+                    <div class="panel panel-default" style="width:170px; height:1000px; background-color:white">
+                        <div class="panel-heading" style="font-family:'Buxton Sketch'"><h2><font color=" #e96519">Catogories</font></h2></div>
+                        <div class="panel-body"><a href="/Home/automobiles">Automobiles</a></div>
+                        <div class="panel-body"><a href="/Home/nature">Nature</a></div>
+                        <div class="panel-body"><a href="/Home/Artistic">Artistic</a></div>
+                        <div class="panel-body"><a href="/Home/fashion">Fashion</a></div>
+                        <div class="panel-body"><a href="/Home/Wildlife">Wildlife</a></div>
+                        <div class="panel-body"><a href="/Home/FoodLove">Food Love</a></div>
+
+                    </div>*@
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-sm-1" style="height:1000px">
+    </div>
+    @*</div>*@
+
+    <div class="row" style="background-color: ghostwhite; height: 1000px">
+
+        @*<div class="col-sm-9" align="center" style="background-color:ghostwhite; width:800px">*@
+
+
+
+        <div class="col-sm-8">
+            <h1 align="left" style="font-family: 'Buxton Sketch'; color: #e96519">Latest Wallpapers</h1>
+            <h3 align="center" style="font-family:'Buxton Sketch'"></h3>
+
+            <h3 align="left" style="font-family:'Buxton Sketch';color:#b6aeae">View  Photos any time, anywhere.. Its always there, Always free !</h3><br />
+        </div>
+       
+
+            <div class="col-sm-3" align="center">
+                <a href="/Home/displayImg" rel="" title="Image 1" class="thumbnail" style="background-color: #009688">
+
+                    <img src="~/Images/car1.jpg" class="img-rounded" width="200" height="200" alt="Title Text" />
+                    <h3 style="font-family :'SketchFlow Print'"><font color="black"></font></h3>
+                    @*"#e96519"*@
+                </a>
+
+            </div>
+
+        <div class="col-sm-3" align="center">
+            <a href="/Home/displayImg" rel="" title="Image 1" class="thumbnail" style="background-color: #009688">
+
+                <img src="~/Images/o11.jpg" class="img-rounded" width="200" height="200" alt="Title Text" />
+                <h3 style="font-family :'SketchFlow Print'"><font color="black"></font></h3>
+                @*"#e96519"*@
+            </a>
+
+        </div>
+
+        <div class="col-sm-3" align="center">
+            <a href="/Home/displayImg" rel="" title="Image 1" class="thumbnail" style="background-color: #009688">
+
+                <img src="~/Images/o3.jpg" class="img-rounded" width="290" height="200" alt="Title Text" />
+                <h3 style="font-family :'SketchFlow Print'"><font color="black"></font></h3>
+                @*"#e96519"*@
+            </a>
+
+        </div>
+        <div class="col-sm-3" align="center">
+            <a href="/Home/displayImg" rel="" title="Image 1" class="thumbnail" style="background-color: #009688">
+
+                <img src="~/Images/w7.jpg" class="img-rounded" width="200" height="200" alt="Title Text" />
+                <h3 style="font-family :'SketchFlow Print'"><font color="black"></font></h3>
+                @*"#e96519"*@
+            </a>
+
+        </div>
+        
+
+
+
+    </div>
+
+
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

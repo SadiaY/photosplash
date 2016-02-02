@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>UploadImg</title>
+</head>
+<body>
+
+    <div>
+        <form action="/Admin/Upload" method="post" enctype="multipart/form-data">
+            <p>Category: <input type="text" name="category" /></p>
+            <p>Acess(private/Public): <input type="text" name="Access" /></p>
+            <p>Image: <input type="file" name="file" /></p>
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+
+    @*<div>
+        <h2>Basic File Upload</h2>
+        @using (Html.BeginForm ("Index",
+                        "Home",
+                        FormMethod.Post,
+                        new { enctype = "multipart/form-data" }))
+{
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" id="file" /><br><br>
+            <input type="submit" value="Upload Image" />
+            <br><br>
+            @ViewBag.Message
+}
+    </div>*@
+
+
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

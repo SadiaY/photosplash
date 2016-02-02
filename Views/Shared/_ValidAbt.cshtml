@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="row" style="background-color:white">
+        <a href="#" rel="" title="Image 1"><img src="~/Images/london - Copy.jpg" class="img-rounded" width="1250" height="200" alt="Title Text" /></a>
+
+
+
+        @*<nav class="navbar navbar-inverse " style="align-items:center">*@
+
+
+        <nav class="navbar navbar-inverse " style="align-items:center">
+            <div class="container-fluid" style="background-color:black">
+
+
+
+
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/Home/newView">Home</a></li>
+                    <li><a href="/Home/VAbout">About</a></li>
+                    <li><a href="/Home/VContact">Contact Us</a></li>
+                    <li><a href="/Home/LatestWallpers">LatestWallpapers</a></li>
+                    <li><a href="/Home/gallery">Gallery</a></li>
+
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Logout</a></li>
+                </ul>
+
+                <form action="#" method="post" id="search" class="navbar-search pull-right">
+                    <input type="text" class="search-query" style="background-color :grey" placeholder="Search">
+                    <input type="image" id="go" src="~/Images/search.gif" alt="Search" />
+                    @*<button type="submit" class="btn">Search</button>*@
+                </form>
+            </div>
+
+        </nav>
+        @*</nav>*@
+        <!-- ####################################################################################################### -->
+        @RenderBody()
+
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

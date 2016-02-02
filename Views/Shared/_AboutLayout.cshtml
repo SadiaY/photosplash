@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>_MainLayout</title>
+</head>
+<body>
+    
+    <div class="row" align="center" style="background-color:white">
+        <a href="#" rel="" title="Image 1"><img src="~/Images/london - Copy.jpg" class="img-rounded" width="1250" height="200" alt="Title Text" /></a>
+
+
+
+
+
+        <nav class="navbar navbar-inverse " style="align-items:center">
+            <div class="container-fluid" style="background-color:black">
+
+
+
+
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/Home/Index">Home</a></li>
+                    <li class="active"><a href="/Home/login">Login</a></li>
+                    <li><a href="/Home/signup">Signup</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/ContactUs">ContactUs</a></li>
+
+
+                </ul>
+
+
+            </div>
+
+        </nav>
+
+    
+       
+        @RenderBody()
+
+    
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
